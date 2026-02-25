@@ -21,19 +21,21 @@ This is a simple demo agent server that uses [MLflow's AgentServer]() to create 
     uv sync
     ```
 
-3. Run the MLflow server:
+3. Update `mcp.json` with the MCP servers you want to use - by default, it uses the NPS MCP server only.
+
+4. Run the MLflow server:
 
     ```sh
     uv run mlflow server
     ```
 
-4. In a separate terminal, run the agent server:
+5. In a separate terminal, run the agent server:
 
     ```sh
     uv run start_server.py
     ```
 
-5. Test the agent server:
+6. Test the agent server:
 
     ```sh
     curl -X POST http://localhost:8000/invocations \
@@ -83,7 +85,7 @@ This is a simple demo agent server that uses [MLflow's AgentServer]() to create 
     ROUTE="https://${ROUTE}"
     ```
 
-5. Check the service is live by navigating to the route `/docs` endpoint
+5. Check the service is live by navigating to the route `/docs` endpoint:
 
     ```sh
     echo "${ROUTE}/docs"
@@ -93,7 +95,7 @@ This is a simple demo agent server that uses [MLflow's AgentServer]() to create 
 
     ![](./docs/api_docs.png)
 
-6. Test the agent server
+6. Test the agent server:
    
     ```sh
     curl -X POST "${ROUTE}/invocations" \
