@@ -89,6 +89,10 @@ This is a simple demo agent server that uses [MLflow's AgentServer]() to create 
     echo "${ROUTE}/docs"
     ```
 
+    You should see the documentation page for the agent server.
+
+    ![](./docs/api_docs.png)
+
 6. Test the agent server
    
     ```sh
