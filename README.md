@@ -102,3 +102,9 @@ This is a simple demo agent server that uses [MLflow's AgentServer]() to create 
         -H "Content-Type: application/json" \
         -d '{ "input": [{ "role": "user", "content": "What campgrounds are available at the grand canyon?"}]}'
     ```
+
+7. View the agent card
+
+    ```sh
+    curl "${ROUTE}/.well-known/agent-card"
+    ```
