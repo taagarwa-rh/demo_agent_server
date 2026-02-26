@@ -1,0 +1,56 @@
+{
+    "name": "nps_agent",
+    "description": "Answers questions about U.S. National Park Services, including campgrounds, alerts, and events",
+    "url": "https://www.redhat.com/",
+    "provider": {
+        "organization": "Red Hat",
+        "url": "https://www.redhat.com/"
+    },
+    "version": "1.0.0",
+    "capabilities": {
+        "streaming": false
+    },
+    "authentication": {
+        "schemes": ["Bearer"]
+    },
+    "defaultInputModes": ["text/plain"],
+    "defaultOutputModes": ["text/plain"],
+    "skills": [
+        {
+            "id": "search_parks",
+            "name": "Search parks",
+            "description": "Search national parks by state, park code, or query.",
+            "tags": ["search"],
+            "examples": ["What parks are in Colorado?"]
+        },
+        {
+            "id": "get_park_alerts",
+            "name": "Get park alerts",
+            "description": "Get the current alerts for a specific park. Includes current weather warnings and other alerts.",
+            "tags": ["search"],
+            "examples": ["What are the alerts at Yellowstone?"]
+        },
+        {
+            "id": "get_park_campgrounds",
+            "name": "Get park campgrounds",
+            "description": "Get campground information for a park. Includes name, address, description, and number and type of campsites.",
+            "tags": ["search"],
+            "examples": ["What campgrounds are available at the Grand Canyon?"]
+        },
+        {
+            "id": "get_park_events",
+            "name": "Get park events",
+            "description": "Get upcoming events for a park. Includes date and event information.",
+            "tags": ["search"],
+            "examples": ["What events are coming up at Acadia?"]
+        },
+        {
+            "id": "get_visitor_centers",
+            "name": "Get visitor centers",
+            "description": "Get visitor center information for a park. Includes address, operating hours, and available services.",
+            "tags": ["search"],
+            "examples": ["List all the visitor centers at Arches."]
+        }
+    ],
+    "supportsAuthenticatedExtendedCard": false
+}
